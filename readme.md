@@ -1,8 +1,8 @@
-This project is developed in laravel 5.4. It contain login form form signin.
+This project is developed in laravel 5.4. It contain login form signin.
 
 INSTALLATION
 download or clone the repository
-using git you can clone it by running git clone https://www.github.com/richiekaby/sampled-login-form laravel-5.4
+using git you can clone it by running git clone https://www.github.com/richiekaby/flash laravel-5.4
 place the folder inside your xampp/htdocs/
 using CMD navigate to your directory and type php artisan serve 
 open your browser and type the following url localhost:8000
