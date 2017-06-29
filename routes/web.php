@@ -14,12 +14,16 @@
 Route::get('/', function () {
     return view('login');
 });
+Route::get('/signup', function () {
+    return view('signup');
+});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 
 
-Route::post('loginFlash', 'SigninController@create');
+Route::post('loginFlash', 'SigninController@signup');
+Route::post('signupFlash', 'SigninController@create');
 

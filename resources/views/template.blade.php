@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" id="extr-page">
 	<head>
 		<meta charset="utf-8">
 		<!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
@@ -15,9 +15,11 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="{{asset ('assets/css/font-awesome.min.css')}}">
 
 		<!-- SmartAdmin Styles : Caution! DO NOT change the order -->
+        <link rel="stylesheet" type="text/css" media="screen" href="{{asset ('assets/css/smartadmin-production-plugins.min.css')}}">
+
 		<link rel="stylesheet" type="text/css" media="screen" href="{{asset ('assets/css/smartadmin-production.min.css')}}">
 		<link rel="stylesheet" type="text/css" media="screen" href="{{asset ('assets/css/smartadmin-skins.min.css')}}">
-
+      
 		<!-- SmartAdmin RTL Support is under construction-->
 		<link rel="stylesheet" type="text/css" media="screen" href="{{asset ('assets/css/smartadmin-rtl.min.css')}}">
 
@@ -34,7 +36,7 @@
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
 
 			</head>
-	<body>
+	<body class="pace-done">
 
 	@yield ('content')
 
@@ -73,30 +75,60 @@
 			}
 		</script> -->
 		<!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-		<script>
-			if (!window.jQuery) {
-				document.write('<script src="{{asset ('assets/js/libs/jquery-2.1.1.min.js')}}"><\/script>');
-			}
-		</script>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-		<script>
-			if (!window.jQuery.ui) {
-				document.write('<script src="{{asset ('assets/js/libs/jquery-ui-1.10.3.min.js')}}"><\/script>');
-			}
-		</script>
+
+		<!--script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script-->
+	
+		<script src="{{asset ('assets/js/libs/jquery-2.1.1.min.js')}}"></script>;
+			
+
+		<!--script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script-->
+
+	    <script src="{{asset ('assets/js/libs/jquery-ui-1.10.3.min.js')}}"></script>
+		
+
+	<!-- BOOTSTRAP JS -->
+		<script src="{{asset ('assets/js/bootstrap/bootstrap.min.js')}}"></script>
+
 		<!-- IMPORTANT: APP CONFIG -->
 		<script src="{{asset ('assets/js/app.config.seed.js')}}"></script>
 
-		<!-- BOOTSTRAP JS -->
-		<script src="{{asset ('assets/js/bootstrap/bootstrap.min.js')}}"></script>
-
+	
 		<!--[if IE 8]>
 			<h1>Your browser is out of date, please update your browser by going to www.microsoft.com/download</h1>
 		<![endif]-->
 
 		<!-- MAIN APP JS FILE -->
 		<script src="{{asset ('assets/js/app.seed.js')}}"></script>
+
+<script type="text/javascript">
+	
+
+	
+		// Validation
+		$("#login-form").on('submit', function(ev){
+			ev.preventDefault();
+			var xEmail = $('#email').val();
+			var xPass = $('#password').val();
+
+			if(xEmail.lenght<0){
+				$("#error_email">.text('sorry email required'));
+			}
+			if{
+				$("#error_password">.text('sorry password required'));
+			}
+
+			
+
+
+
+
+
+		});
+	
+</script>
+
+
+
 		</body>
 		</html>
