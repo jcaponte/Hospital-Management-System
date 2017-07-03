@@ -6,6 +6,7 @@ login/signup
 
 
 @section('content')
+<body id="extr-page">
 <header id="header">
 			<!--<span id="logo"></span>-->
 
@@ -36,9 +37,9 @@ login/signup
 									<a href="#" class="btn btn-danger btn-sm">Find out more</a>
 								</div>
 							</div>
-							
+
 							<img src="{{asset('assets/img/demo/iphoneview.png')}}" alt="" class="pull-right display-image" style="width:210px">
-							
+
 						</div>
 
 						<div class="row">
@@ -65,10 +66,10 @@ login/signup
 									Registration is FREE*
 								</header>
 								{{ csrf_field() }}
-  
+
   @if(Session::has('success'))<p class="alert alert-success">{{Session::get('success')}}</p>
 @endif
-  
+
 								<fieldset>
 									<section>
 										<label class="input"> <i class="icon-append fa fa-user"></i>
@@ -94,7 +95,7 @@ login/signup
 											<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
 									</section>
 
-								 @if($errors->has('confirmPassword')) <p class="text-danger alert alert-danger" id="confirmPassword_error">{{$errors->first('confirmPassword')}}</p> @endif	
+								 @if($errors->has('confirmPassword')) <p class="text-danger alert alert-danger" id="confirmPassword_error">{{$errors->first('confirmPassword')}}</p> @endif
 								</fieldset>
 
 								<fieldset>
@@ -139,7 +140,7 @@ login/signup
 											<i></i>I agree with the <a href="#" data-toggle="modal" data-target="#myModal"> Terms and Conditions </a></label>
 									</section>
 
-								 @if($errors->has('terms')) <p class="text-danger alert alert-warning" id="terms_error">{{$errors->first('terms')}}</p> @endif	
+								 @if($errors->has('terms')) <p class="text-danger alert alert-warning" id="terms_error">{{$errors->first('terms')}}</p> @endif
 								</fieldset>
 								<footer>
 									<button type="submit" class="btn btn-primary">
@@ -186,7 +187,7 @@ login/signup
 						<h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
 					</div>
 					<div class="modal-body custom-scroll terms-body">
-						
+
  <div id="left">
 
 
@@ -352,18 +353,18 @@ Contractology supply a wide variety of commercial legal documents, such as <a hr
 
             <p>You can contact [NAME] by email to [EMAIL].</p>
 
-           
+
 
             </div>
-			
+
 			<br><br>
 
-            <p><strong>By using this  WEBSITE TERMS AND CONDITIONS template document, you agree to the 
-	 <a href="#">terms and conditions</a> set out on 
-	 <a href="#">SmartAdmin.com</a>.  You must retain the credit 
-	 set out in the section headed "ABOUT THESE WEBSITE TERMS AND CONDITIONS".  Subject to the licensing restrictions, you should 
-	 edit the document, adapting it to the requirements of your jurisdiction, your business and your 
-	 website.  If you are not a lawyer, we recommend that you take professional legal advice in relation to the editing and 
+            <p><strong>By using this  WEBSITE TERMS AND CONDITIONS template document, you agree to the
+	 <a href="#">terms and conditions</a> set out on
+	 <a href="#">SmartAdmin.com</a>.  You must retain the credit
+	 set out in the section headed "ABOUT THESE WEBSITE TERMS AND CONDITIONS".  Subject to the licensing restrictions, you should
+	 edit the document, adapting it to the requirements of your jurisdiction, your business and your
+	 website.  If you are not a lawyer, we recommend that you take professional legal advice in relation to the editing and
 	 use of the template.</strong></p>
 
 
@@ -375,7 +376,7 @@ Contractology supply a wide variety of commercial legal documents, such as <a hr
 						<button type="button" class="btn btn-primary" id="i-agree">
 							<i class="fa fa-check"></i> I Agree
 						</button>
-						
+
 						<button type="button" class="btn btn-danger pull-left" id="print">
 							<i class="fa fa-print"></i> Print
 						</button>

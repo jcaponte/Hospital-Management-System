@@ -6,6 +6,7 @@ login/signin
 @stop
 
 @section('content')
+<body id="extr-page">
 <header id="header">
 	<!--<span id="logo"></span>-->
 
@@ -15,7 +16,7 @@ login/signin
 		<!-- END AJAX-DROPDOWN -->
 	</div>
 
-	<span id="extr-page-header-space"> <span class="hidden-mobile hiddex-xs">Need an account?</span> 
+	<span id="extr-page-header-space"> <span class="hidden-mobile hiddex-xs">Need an account?</span>
 	<a href="{{url('signup')}}" class="btn btn-danger">Create account</a> </span>
 
 </header>
@@ -31,7 +32,7 @@ login/signin
       xfbml      : true,
       version    : 'v2.8'
     });
-    FB.AppEvents.logPageView();   
+    FB.AppEvents.logPageView();
   };
 
   (function(d, s, id){
@@ -57,7 +58,7 @@ login/signin
 							<a href="#" class="btn btn-danger btn-sm">Find out more</a>
 						</div>
 					</div>
-					
+
 					<img src="http://localhost/template/PHP_HTML_Version/img/demo/iphoneview.png" class="pull-right display-image" alt="" style="width:210px">
 
 				</div>
@@ -85,7 +86,7 @@ login/signin
 							<h3 class="text-center text-info">Sign In</h3>
 						</header>
 {{ csrf_field() }}
- 
+
 
 
 
@@ -107,11 +108,11 @@ login/signin
 								<label class="label">Password</label>
 								<label class="input"> <i class="icon-append fa fa-lock"></i>
 									<input type="password" name="password">
-									<b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b> </label> 
-									<!--if there is an error with our password it is displayed here-->   
+									<b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b> </label>
+									<!--if there is an error with our password it is displayed here-->
 									@if($errors->has('password')) <p class="text-danger  alert alert-danger" id="password_error">{{$errors->first('password')}}</p> @endif
 								<div class="note">
-									<a href="#">Forgot password?</a> || 
+									<a href="#">Forgot password?</a> ||
 									<a href="#">Create Account?</a>
 								</div>
 							</section>
@@ -130,9 +131,9 @@ login/signin
 					</form>
 
 				</div>
-				
+
 				<h5 class="text-center"> - Or sign in using -</h5>
-													
+
 								<ul class="list-inline text-center">
 									<li>
 										<a href="javascript:void(0);" class="btn btn-primary btn-circle"><i class="fa fa-facebook"></i></a>
@@ -144,7 +145,7 @@ login/signin
 										<a href="javascript:void(0);" class="btn btn-warning btn-circle"><i class="fa fa-linkedin"></i></a>
 									</li>
 								</ul>
-				
+
 			</div>
 		</div>
 	</div>

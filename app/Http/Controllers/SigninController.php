@@ -9,11 +9,11 @@ use Redirect;
 
 class SigninController extends Controller
 {
-   
+
 
     public function signup(Request $request){
 
-//check if server request method is POST
+/*/check if server request method is POST
 $requestMethod= $request->ismethod('post');
 $data=$request->all();
 	if($requestMethod){
@@ -22,7 +22,7 @@ $data=$request->all();
 //check if all the inputs has data
    $rule=array(
 'email'=>'required', 'password'=>'required');
- 
+
  //message to user incase an error occurs
  $message=array(
  'email.required'=> 'please type in your email', 'password.required'=>' sorry password is needed');
@@ -37,7 +37,10 @@ return back()->withErrors($validator);
 }else{
 	return back()->with('success','you are successfully logged in');
 }
-}
+}*/
+//$data=$request->all();
+//$name=$data->email;
+return Redirect::to('profile');
 }
 
 
@@ -60,7 +63,7 @@ $data=$request->all();
  'gender'=>'required'
 
  );
- 
+
  //message to user incase an error occurs
  $message=array('username.required'=>'username required',
  'email.required'=> 'please type in your email','password.required'=>'password is needed', 'password.min'=>'password should be more than 6 characters','confirmPassword.required'=>'password is required','confirmPassword.same'=>'password should match' , 'terms.required'=>'You must agree with the terms and conditions' , 'gender.required'=>'check gender');
