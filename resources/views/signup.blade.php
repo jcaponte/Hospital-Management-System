@@ -7,7 +7,7 @@ login/signup
 
 @section('content')
 <body id="extr-page">
-<header id="header">
+@section('header')
 			<!--<span id="logo"></span>-->
 
 			<div id="logo-group">
@@ -17,8 +17,7 @@ login/signup
 			</div>
 
 			<span id="extr-page-header-space"> <span class="hidden-mobile hiddex-xs">Already registered?</span> <a href="{{URL ('/')}}" class="btn btn-danger">Sign In</a> </span>
-
-		</header>
+@endsection
 
 		<div id="main" role="main">
 
@@ -387,4 +386,4 @@ Contractology supply a wide variety of commercial legal documents, such as <a hr
 
 <!-- ==========================CONTENT ENDS HERE ========================== -->
 
-@stop
+@endsection

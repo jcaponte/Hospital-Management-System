@@ -20,18 +20,11 @@
  * - HTML
  * - BODY
  * - CUSTOM STYLES
- */
- #login_body{
-  padding-top: 90px;
-   z-index: 10000
+*/
+#demo-setting{
+	display:none;
 }
-/*#header{
-	    margin: 0;
-    height: 50px;
-    border-bottom: 1px solid #eee!important;
-    overflow: hidden;
-    padding: 0 30px;
-    border-width: 0;
-    min-height: 28px;
-    background: ##dad7d7!important;
-}*/
+input[type="text"] { width: 100px; height:30px;}
+.panel-default{
+background-color:#f3f3f3;
+}

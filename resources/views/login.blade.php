@@ -7,7 +7,7 @@ login/signin
 
 @section('content')
 <body id="extr-page">
-<header id="header">
+@section('header')
 	<!--<span id="logo"></span>-->
 
 	<div id="logo-group">
@@ -19,7 +19,7 @@ login/signin
 	<span id="extr-page-header-space"> <span class="hidden-mobile hiddex-xs">Need an account?</span>
 	<a href="{{url('signup')}}" class="btn btn-danger">Create account</a> </span>
 
-</header>
+@endsection
 
 
 <div id="main" role="main">
@@ -152,4 +152,4 @@ login/signin
 
 </div>
 
-@stop
+@endsection
